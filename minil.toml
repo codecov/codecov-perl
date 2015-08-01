@@ -1,0 +1,3 @@
+name = "Devel-Cover-Report-Codecov"
+badges = ["travis"]
+module_maker="ModuleBuildTiny"

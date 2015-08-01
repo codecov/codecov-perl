@@ -1,0 +1,84 @@
+{
+   "abstract" : "Backend for Codecov reporting of coverage statistics",
+   "author" : [
+      "Pine Mizune"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v2.5.0, CPAN::Meta::Converter version 2.150005",
+   "license" : [
+      "unknown"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Devel-Cover-Report-Codecov",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author",
+         "builder"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build::Tiny" : "0.035"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion::Fast" : "0.04",
+            "Test::PAUSE::Permissions" : "0.04",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.7"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Furl" : "3.07",
+            "IO::Socket::SSL" : "2.016",
+            "JSON::XS" : "3.01",
+            "Module::Find" : "0.13",
+            "URI" : "1.60",
+            "perl" : "5.008001"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Capture::Tiny" : "0.30",
+            "Devel::Cover" : "1.20",
+            "Perl::Critic" : "1.125",
+            "Test::Deep" : "0.117",
+            "Test::Exception" : "0.40",
+            "Test::Mock::Guard" : "0.10",
+            "Test::MockObject" : "1.20150527",
+            "Test::More" : "1.001014",
+            "Test::Perl::Critic" : "1.03"
+         }
+      }
+   },
+   "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/pine613/p5-Devel-Cover-Codecov/issues"
+      },
+      "homepage" : "https://github.com/pine613/p5-Devel-Cover-Codecov",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/pine613/p5-Devel-Cover-Codecov.git",
+         "web" : "https://github.com/pine613/p5-Devel-Cover-Codecov"
+      }
+   },
+   "version" : "0.01",
+   "x_contributors" : [
+      "Pine Mizune <pinemz@gmail.com>"
+   ],
+   "x_serialization_backend" : "JSON::PP version 2.27203"
+}

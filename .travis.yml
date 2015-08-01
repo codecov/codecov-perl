@@ -1,0 +1,23 @@
+language: perl
+sudo: false
+
+perl:
+  - "5.10"
+  - "5.12"
+  - "5.14"
+  - "5.16"
+  - "5.18"
+  - "5.20"
+
+script:
+  # unit tests
+  - prove -r t/codecov
+
+  # integration tests
+  - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" prove -r t/data/proj/t
+  - PERL5LIB=./lib cover -report codecov
+
+notifications:
+  slack:
+    - secure: "LiypVOGzfJoeTmdzkz2szBQIrflXFZZ4HFdVcaxeWe4bt1VT/f5l2sNd+lCcCarUjzKHfvqBvYOMusOJ2BuzA/6XIfwT7fN/QTkTwl9ARSC2Dk9xtjPeNFl97feCWirSlRVRALryO6oQOwaFO1ksGaCE4YVr1U0YqdLSvvCnebXN04o0o15QRHqGJJYLjwe/2y6rwVuKlCH9bRNZA6OUfv7W3noEHLJ4BnhC0DAZ9qR+anq7vgvIFyy4OadMMBMFcyymt3C1FA4MXI/X3UzmUbmUSKbXXvmeTYo8y0TS8Gtv46dOYCKxiGgODa/v6i6glPCY1KQvwVCsOq+z7xXPgK5HrfcZ/+tlLi40vhXWcroH0w8vlKMnsRKQ59Vg2pOM03vIXuM4T9s7i+KrLLW6M9DlESQeaCdENsUzBGeN9SffBJYR9Wy8rEJADShY2EKM4xaQjGGixX+Rx9m6j27O7WfSVEIcR7u+f8Kuzo5yCdeKUV198A+DdPm63LJoB3P8ccKbXsgF4tUUsGRPUOtARNzrInhrsG1tcQlV3XKKyJOiv0B/zADQO/dggfUh/Emv4heLCtapcihb3XYnUOGVywcBiNTsjk1GOMjzQSSsVxw+UhGWXrz1PPIWa6cbalem1YVBvwA3lh5tZEZkl7jsOrIrJGEiiTVw2Cbk3sBKMkk="
+

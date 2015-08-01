@@ -1,0 +1,10 @@
+*~
+*.swp
+*.swo
+
+/local/
+cpanfile.snapshot
+
+cover_db/
+
+/Devel-Cover-Report-Codecov-*
