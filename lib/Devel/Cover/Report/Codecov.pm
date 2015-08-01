@@ -2,7 +2,7 @@ package Devel::Cover::Report::Codecov;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use URI;
 use Furl;
@@ -158,6 +158,7 @@ Devel::Cover::Report::Codecov - Backend for Codecov reporting of coverage statis
 Devel::Cover::Report::Codecov is coverage reporter for L<https://codecov.io>.
 
 =head2 CI Companies Supported
+
 Travis CI, Codeship, Circle CI, drone.io, AppVeyor supported.
 You must set CODECOV_TOKEN environment variables if you don't use Travis CI, Circle CI and AppVeyor.
 
