@@ -161,6 +161,14 @@ Devel::Cover::Report::Codecov is coverage reporter for L<https://codecov.io>.
 Travis CI, Codeship, Circle CI, drone.io, AppVeyor supported.
 You must set CODECOV_TOKEN environment variables if you don't use Travis CI, Circle CI and AppVeyor.
 
+=head1 SEE ALSO
+
+=over 4
+
+=item * L<Devel::Cover>
+
+=back
+
 =head1 LICENSE
 
 The MIT License (MIT)

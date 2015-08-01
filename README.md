@@ -15,6 +15,10 @@ Devel::Cover::Report::Codecov is coverage reporter for [https://codecov.io](http
 Travis CI, Codeship, Circle CI, drone.io, AppVeyor supported.
 You must set CODECOV\_TOKEN environment variables if you don't use Travis CI, Circle CI and AppVeyor.
 
+# SEE ALSO
+
+- [Devel::Cover](https://metacpan.org/pod/Devel::Cover)
+
 # LICENSE
 
 The MIT License (MIT)
