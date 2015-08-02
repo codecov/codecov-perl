@@ -1,0 +1,42 @@
+box: perl:5.18.2
+
+build:
+  steps:
+    - script:
+        name: install cpanm
+        code: |
+          curl -L https://cpanmin.us/ -o cpanm
+          chmod +x cpanm
+          mv cpanm /usr/bin
+
+    - script:
+        name: install carton
+        code: |
+          cpanm install Carton
+
+    - script:
+        name: install dependencies
+        code: |
+          export PERL_CARTON_PATH=$WERCKER_CACHE_DIR/local
+          export PERL_CARTON_CPANFILE=$WERCKER_SOURCE_DIR/cpanfile
+          carton install
+
+    - script:
+        name: unit tests
+        code: |
+          carton exec prove -r t/codecov
+
+    - script:
+        name: integration tests
+        code: |
+          HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" \
+            carton exec -- prove -r t/data/proj/t
+          PERL5OPT="-Mlib=$WERCKER_SOURCE_DIR/lib" carton exec -- cover -report codecov
+
+  after-steps:
+    - install-packages:
+        packages: ruby
+
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_WEBHOOK_URL
+        channel: ci
