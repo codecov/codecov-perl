@@ -3,7 +3,7 @@ box: perl:5.18.2
 build:
   steps:
     - install-packages:
-        package: ruby2.1
+        packages: ruby2.1
 
     - script:
         name: install cpanm
