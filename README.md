@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pine613/p5-Devel-Cover-Codecov.svg?branch=master)](https://travis-ci.org/pine613/p5-Devel-Cover-Codecov)
+[![Build Status](https://travis-ci.org/pine613/p5-Devel-Cover-Report-Codecov.svg?branch=master)](https://travis-ci.org/pine613/p5-Devel-Cover-Report-Codecov)
 # NAME
 
 Devel::Cover::Report::Codecov - Backend for Codecov reporting of coverage statistics

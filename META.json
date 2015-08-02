@@ -67,13 +67,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/pine613/p5-Devel-Cover-Codecov/issues"
+         "web" : "https://github.com/pine613/p5-Devel-Cover-Report-Codecov/issues"
       },
-      "homepage" : "https://github.com/pine613/p5-Devel-Cover-Codecov",
+      "homepage" : "https://github.com/pine613/p5-Devel-Cover-Report-Codecov",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/pine613/p5-Devel-Cover-Codecov.git",
-         "web" : "https://github.com/pine613/p5-Devel-Cover-Codecov"
+         "url" : "git://github.com/pine613/p5-Devel-Cover-Report-Codecov.git",
+         "web" : "https://github.com/pine613/p5-Devel-Cover-Report-Codecov"
       }
    },
    "version" : "0.02",
