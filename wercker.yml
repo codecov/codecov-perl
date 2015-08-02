@@ -6,3 +6,7 @@ build:
         name: install dependencies
         code: |
           carton install
+
+  after-steps:
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_WEBHOOK_URL
