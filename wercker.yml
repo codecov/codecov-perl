@@ -29,8 +29,9 @@ build:
     - script:
         name: integration tests
         code: |
-          HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" prove -r t/data/proj/t
-          PERL5LIB=./lib cover -report codecov
+          HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" \
+            carton exec -- prove -r t/data/proj/t
+          PERL5LIB="$WERCKER_SOURCE_DIR/lib" carton exec -- cover -report codecov
 
   after-steps:
     - install-packages:
