@@ -1,2 +1,8 @@
-box: papix/perl5.18@0.0.1
+box: papix/perl5.18
 
+build:
+  steps:
+    - script:
+        name: install dependencies
+        code: |
+          carton install
