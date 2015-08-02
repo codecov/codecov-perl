@@ -155,7 +155,7 @@ Devel::Cover::Report::Codecov - Backend for Codecov reporting of coverage statis
 
 =head1 DESCRIPTION
 
-Devel::Cover::Report::Codecov is coverage reporter for L<https://codecov.io>.
+Devel::Cover::Report::Codecov is coverage reporter for L<Codecov|https://codecov.io>.
 
 =head2 CI Companies Supported
 
