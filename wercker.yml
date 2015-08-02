@@ -1,4 +1,4 @@
-box: pjcj/perl-5.18.2
+box: perl:5.18.2
 
 build:
   steps:
