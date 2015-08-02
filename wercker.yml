@@ -2,9 +2,6 @@ box: perl:5.18.2
 
 build:
   steps:
-    - install-packages:
-        packages: ruby2.1
-
     - script:
         name: install cpanm
         code: |
@@ -20,8 +17,13 @@ build:
     - script:
         name: install dependencies
         code: |
+          export PERL_CARTON_PATH=$WERCKER_CACHE_DIR/local
+          export PERL_CARTON_CPANFILE=$WERCKER_SOURCE_DIR/cpanfile
           carton install
 
   after-steps:
+    - install-packages:
+        packages: ruby2.1
+
     - wantedly/pretty-slack-notify:
         webhook_url: $SLACK_WEBHOOK_URL
