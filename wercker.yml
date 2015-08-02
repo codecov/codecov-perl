@@ -21,14 +21,20 @@ build:
           export PERL_CARTON_CPANFILE=$WERCKER_SOURCE_DIR/cpanfile
           carton install
 
-  after-steps:
-    - install-packages:
-        packages: ruby2.1
+    - script:
+        name: unit tests
+        code: |
+          carton exec prove -r t/codecov
 
     - script:
-        name: alias from ruby2.1 to ruby
+        name: integration tests
         code: |
-          ln -s `which ruby2.1` /usr/bin/ruby
+          HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" prove -r t/data/proj/t
+          PERL5LIB=./lib cover -report codecov
+
+  after-steps:
+    - install-packages:
+        packages: ruby
 
     - wantedly/pretty-slack-notify:
         webhook_url: $SLACK_WEBHOOK_URL
