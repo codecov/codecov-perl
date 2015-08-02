@@ -2,10 +2,20 @@ box: perl:5.18.2
 
 build:
   steps:
+    - install-packages:
+        package: ruby2.1
+
     - script:
         name: install cpanm
         code: |
-          curl -L https://cpanmin.us | perl - --sudo App::cpanminus
+          curl -L https://cpanmin.us/ -o cpanm
+          chmod +x cpanm
+          mv cpanm /usr/bin
+
+    - script:
+        name: install carton
+        code: |
+          cpanm install Carton
 
     - script:
         name: install dependencies
@@ -13,8 +23,5 @@ build:
           carton install
 
   after-steps:
-    - install-packages:
-        package: ruby2.1
-
     - wantedly/pretty-slack-notify:
         webhook_url: $SLACK_WEBHOOK_URL
