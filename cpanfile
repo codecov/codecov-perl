@@ -20,3 +20,8 @@ on 'test' => sub {
     requires 'Capture::Tiny', '0.30';
 };
 
+on 'develop' => sub {
+    requires 'Data::Dumper', '2.154';
+    requires 'Data::Section::Simple', '0.07';
+    requires 'Text::MicroTemplate', '0.24';
+};
