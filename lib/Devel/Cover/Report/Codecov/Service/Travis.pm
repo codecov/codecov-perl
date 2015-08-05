@@ -2,7 +2,6 @@ package Devel::Cover::Report::Codecov::Service::Travis;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.02';
 
 sub detect {
     return $ENV{TRAVIS};
