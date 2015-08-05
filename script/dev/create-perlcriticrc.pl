@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-use 5.18.2;
+use feature qw/say/;
 use Module::Find;
 use Data::Section::Simple qw/get_data_section/;
 use Text::MicroTemplate qw/render_mt/;
