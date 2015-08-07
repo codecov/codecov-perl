@@ -13,8 +13,14 @@ Devel::Cover::Report::Codecov is coverage reporter for [Codecov](https://codecov
 
 ## CI Companies Supported
 
-Travis CI, Codeship, Circle CI, drone.io, AppVeyor supported.
+Many CI services supported.
 You must set CODECOV\_TOKEN environment variables if you don't use Travis CI, Circle CI and AppVeyor.
+
+- [Travis CI](https://travis-ci.org/)
+- [Circle CI](https://circleci.com/)
+- [Codeship](https://codeship.com/)
+- [AppVeyor](http://www.appveyor.com/)
+- [Wercker](http://wercker.com/)
 
 # SEE ALSO
 
