@@ -18,8 +18,11 @@ You must set CODECOV\_TOKEN environment variables if you don't use Travis CI, Ci
 
 - [Travis CI](https://travis-ci.org/)
 - [Circle CI](https://circleci.com/)
-- [Codeship](https://codeship.com/)
 - [AppVeyor](http://www.appveyor.com/)
+- [Codeship](https://codeship.com/)
+- [Drone.io](https://drone.io/)
+- [Semaphore](https://semaphoreci.com/)
+- [Snap CI](https://snap-ci.com/)
 - [Wercker](http://wercker.com/)
 
 # SEE ALSO
