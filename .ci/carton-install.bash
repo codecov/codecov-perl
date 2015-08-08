@@ -15,4 +15,9 @@ if [ -n "$SNAP_CI" ]; then
     export PERL_CARTON_CPANFILE=$SNAP_WORKING_DIR/cpanfile
 fi
 
+if [ -n "$SEMAPHORE" ]; then
+    export PERL_CARTON_PATH=$SEMAPHORE_CACHE_DIR/local
+    export PERL_CARTON_CPANFILE=$SEMAPHORE_PROJECT_DIR/cpanfile
+fi
+
 carton install

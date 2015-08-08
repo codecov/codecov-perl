@@ -15,9 +15,16 @@ if [ -n "$SNAP_CI" ]; then
     export PERL_CARTON_CPANFILE=$SNAP_WORKING_DIR/cpanfile
 fi
 
+if [ -n "$SEMAPHORE" ]; then
+    export PERL_CARTON_PATH=$SEMAPHORE_CACHE_DIR/local
+    export PERL_CARTON_CPANFILE=$SEMAPHORE_PROJECT_DIR/cpanfile
+fi
+
 carton exec prove -r t/codecov
 
-HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" \
+carton exec -- cover -delete
+
+HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/|^.semaphore-cache/" \
     carton exec -- prove -r t/data/proj/t
 
 PERL5OPT=-Mlib=$PWD/lib carton exec -- cover -report codecov
