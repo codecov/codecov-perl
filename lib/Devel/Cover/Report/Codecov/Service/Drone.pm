@@ -9,7 +9,7 @@ sub detect {
 
 sub configuration {
     return {
-        service   => 'drone',
+        service   => 'drone.io',
         build     => $ENV{DRONE_BUILD_NUMBER},
         commit    => $ENV{DRONE_COMMIT},
         build_url => $ENV{DRONE_BUILD_URL},
