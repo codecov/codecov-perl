@@ -22,6 +22,8 @@ fi
 
 carton exec prove -r t/codecov
 
+carton exec -- cover -delete
+
 HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" \
     carton exec -- prove -r t/data/proj/t
 

@@ -18,9 +18,6 @@ if [ ! -e "$PLENV_ROOT" ]; then
     git clone git://github.com/tokuhirom/Perl-Build.git "$PLENV_ROOT/plugins/perl-build/"
 fi
 
-echo "$PLENV_ROOT"
-echo "$HOME/.plenv"
-
 if [ "$PLENV_ROOT" != "$HOME/.plenv" ]; then
     ln -s "$PLENV_ROOT" "$HOME/.plenv"
 fi
