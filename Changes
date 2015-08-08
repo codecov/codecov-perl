@@ -2,6 +2,10 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.04 2015-08-08T07:36:33Z
+    - support Snap CI
+    - support Semaphore
+
 0.03 2015-08-05T15:34:50Z
     - fix tests
 
