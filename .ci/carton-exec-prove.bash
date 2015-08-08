@@ -24,7 +24,7 @@ carton exec prove -r t/codecov
 
 carton exec -- cover -delete
 
-HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|local/lib/perl5/" \
+HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/|^.semaphore-cache/" \
     carton exec -- prove -r t/data/proj/t
 
 PERL5OPT=-Mlib=$PWD/lib carton exec -- cover -report codecov
