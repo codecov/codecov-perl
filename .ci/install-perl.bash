@@ -18,6 +18,8 @@ if [ ! -e "$HOME/.plenv" ]; then
     git clone git://github.com/tokuhirom/Perl-Build.git ~/.plenv/plugins/perl-build/
 fi
 
+chmod u+w ~/.bashrc # for Snap CI
+
 echo 'export PATH="$HOME/.plenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(plenv init -)"' >> ~/.bashrc
 
