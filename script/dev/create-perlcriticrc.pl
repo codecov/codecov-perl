@@ -1,6 +1,5 @@
 #!/usr/bin/env perl
 
-use feature qw/say/;
 use Module::Find;
 use Data::Section::Simple qw/get_data_section/;
 use Text::MicroTemplate qw/render_mt/;
@@ -27,13 +26,13 @@ sub load_template {
 sub main {
     my $policies = filter_policies(find_all_policies);
     my $template = load_template;
-    say render_mt($template, policies_to_string($policies));
+    print render_mt($template, policies_to_string($policies));
+    print "\n";
 }
 
 main unless caller;
 
 __DATA__
-
 @@ perlcriticrc
 only = 1
 include = <?= $_[0] ?>
