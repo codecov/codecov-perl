@@ -8,11 +8,14 @@ sub detect {
 }
 
 sub configuration {
+    my $commit = defined $ENV{SNAP_COMMIT} ? $ENV{SNAP_COMMIT} : $ENV{SNAP_UPSTREAM_COMMIT};
+    my $branch = defined $ENV{SNAP_BRANCH} ? $ENV{SNAP_BRANCH} : $ENV{SNAP_UPSTREAM_BRANCH};
+
     return {
         service      => 'snap',
         build        => $ENV{SNAP_PIPELINE_COUNTER},
-        commit       => $ENV{SNAP_COMMIT} // $ENV{SNAP_UPSTREAM_COMMIT},
-        branch       => $ENV{SNAP_BRANCH} // $ENV{SNAP_UPSTREAM_BRANCH},
+        commit       => $commit,
+        branch       => $branch,
         pull_request => $ENV{SNAP_PULL_REQUEST_NUMBER},
     };
 }

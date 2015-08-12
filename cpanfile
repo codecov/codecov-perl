@@ -1,4 +1,4 @@
-requires 'perl', '5.008001';
+requires 'perl', '5.008008';
 
 requires 'URI', '1.60';
 requires 'Furl', '3.07';
