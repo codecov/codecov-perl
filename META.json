@@ -50,7 +50,7 @@
             "JSON::XS" : "3.01",
             "Module::Find" : "0.13",
             "URI" : "1.60",
-            "perl" : "5.008001"
+            "perl" : "5.008008"
          }
       },
       "test" : {
@@ -70,16 +70,16 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/pine613/p5-Devel-Cover-Report-Codecov/issues"
+         "web" : "https://github.com/codecov/codecov-perl/issues"
       },
-      "homepage" : "https://github.com/pine613/p5-Devel-Cover-Report-Codecov",
+      "homepage" : "https://github.com/codecov/codecov-perl",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/pine613/p5-Devel-Cover-Report-Codecov.git",
-         "web" : "https://github.com/pine613/p5-Devel-Cover-Report-Codecov"
+         "url" : "git://github.com/codecov/codecov-perl.git",
+         "web" : "https://github.com/codecov/codecov-perl"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_contributors" : [
       "Pine Mizune <pinemz@gmail.com>"
    ],
