@@ -14,6 +14,7 @@ perl:
 script:
   # unit tests
   - prove -r t/codecov
+  - prove -r xt/codecov
 
   # integration tests
   - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" prove -r t/data/proj/t
