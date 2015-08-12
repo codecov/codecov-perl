@@ -6,7 +6,7 @@ use t::Util;
 
 eval {
     require Test::Perl::Critic;
-    Test::Perl::Critic->import( -profile => 't/perlcriticrc', -severity => 1 );
+    Test::Perl::Critic->import( -profile => 'xt/perlcriticrc', -severity => 1 );
 };
 
 all_critic_ok('lib', 't');
