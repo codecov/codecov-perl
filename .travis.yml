@@ -17,7 +17,16 @@ script:
   - prove -r xt/codecov
 
   # integration tests
-  - HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" prove -r t/data/proj/t
+  - cover -delete
+  - |-
+    HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" \
+    prove -r t/data/proj/t
+  - PERL5LIB=./lib cover -report codecov
+
+  - cover -delete
+  - |-
+    HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj_blib/t/|^local/" \
+    prove -r t/data/proj_blib/t
   - PERL5LIB=./lib cover -report codecov
 
 notifications:
