@@ -9,11 +9,11 @@ sub semaphore { 'Devel::Cover::Report::Codecov::Service::Semaphore' }
 
 subtest basic => sub {
     local %ENV = (
-        SEMAPHORE_BUILD_NUMBER => 'build_number',
+        SEMAPHORE_BUILD_NUMBER   => 'build_number',
         SEMAPHORE_CURRENT_THREAD => 'thread',
-        REVISION               => 'revision',
-        BRANCH_NAME            => 'branch_name',
-        SEMAPHORE_REPO_SLUG    => 'slug',
+        REVISION                 => 'revision',
+        BRANCH_NAME              => 'branch_name',
+        SEMAPHORE_REPO_SLUG      => 'slug',
     );
 
     cmp_deeply
