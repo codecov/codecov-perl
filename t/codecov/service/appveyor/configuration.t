@@ -8,6 +8,8 @@ use Devel::Cover::Report::Codecov::Service::AppVeyor;
 sub appveyor { 'Devel::Cover::Report::Codecov::Service::AppVeyor' }
 
 subtest basic => sub {
+    local $ENV{APPVEYOR_ACCOUNT_NAME}  = 'name';
+    local $ENV{APPVEYOR_PROJECT_SLUG}  = 'slug';
     local $ENV{APPVEYOR_REPO_COMMIT}   = 'commit';
     local $ENV{APPVEYOR_REPO_BRANCH}   = 'branch';
     local $ENV{APPVEYOR_BUILD_VERSION} = 'build_version';
@@ -20,7 +22,7 @@ subtest basic => sub {
             service => 'appveyor',
             commit  => 'commit',
             branch  => 'branch',
-            job     => 'build_version',
+            job     => 'name/sluf/build_version',
             build   => 'job_id',
             slug    => 'repo_name',
         };

@@ -10,6 +10,7 @@ sub semaphore { 'Devel::Cover::Report::Codecov::Service::Semaphore' }
 subtest basic => sub {
     local %ENV = (
         SEMAPHORE_BUILD_NUMBER => 'build_number',
+        SEMAPHORE_CURRENT_THREAD => 'thread',
         REVISION               => 'revision',
         BRANCH_NAME            => 'branch_name',
         SEMAPHORE_REPO_SLUG    => 'slug',
@@ -19,7 +20,7 @@ subtest basic => sub {
         semaphore->configuration,
         {
             service => 'semaphore',
-            build   => 'build_number',
+            build   => 'build_number.thread',
             commit  => 'revision',
             branch  => 'branch_name',
             slug    => 'slug',

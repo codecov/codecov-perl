@@ -10,7 +10,7 @@ sub detect {
 sub configuration {
     return {
         service => 'semaphore',
-        build   => $ENV{SEMAPHORE_BUILD_NUMBER},
+        build   => $ENV{SEMAPHORE_BUILD_NUMBER} . '/' . $ENV{SEMAPHORE_CURRENT_THREAD},
         commit  => $ENV{REVISION},
         branch  => $ENV{BRANCH_NAME},
         slug    => $ENV{SEMAPHORE_REPO_SLUG},
