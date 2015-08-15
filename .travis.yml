@@ -17,17 +17,17 @@ script:
   - prove -r xt/codecov
 
   # integration tests
-  - cover -delete
+  - cd $TRAVIS_BUILD_DIR/t/data/proj
   - |-
-    HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj/t/|^local/" \
-    prove -r t/data/proj/t
-  - PERL5LIB=./lib cover -report codecov
+    HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t|^local/" \
+    prove -r t
+  - PERL5LIB=$TRAVIS_BUILD_DIR/lib cover -report codecov
 
-  - cover -delete
+  - cd $TRAVIS_BUILD_DIR/t/data/proj_blib
   - |-
-    HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t/Util.pm|^t/data/proj_blib/t/|^local/" \
-    prove -r t/data/proj_blib/t
-  - PERL5LIB=./lib cover -report codecov
+    HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t|^local/" \
+    prove -r t
+  - PERL5LIB=$TRAVIS_BUILD_DIR/lib cover -report codecov
 
 notifications:
   slack:

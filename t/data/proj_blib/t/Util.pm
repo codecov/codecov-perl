@@ -2,10 +2,6 @@ use strict;
 use warnings;
 use utf8;
 
-use lib qw(
-    lib
-);
-
 use Exporter 'import';
 
 use Test::More;

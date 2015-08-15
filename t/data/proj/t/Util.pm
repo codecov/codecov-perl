@@ -2,9 +2,7 @@ use strict;
 use warnings;
 use utf8;
 
-use lib qw(
-    lib
-);
+use lib qw(lib);
 
 use Exporter 'import';
 
