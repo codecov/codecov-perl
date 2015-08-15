@@ -2,6 +2,9 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.06 2015-08-15T04:37:07Z
+    - support blib directory
+
 0.05 2015-08-12T16:42:59Z
     - fix bugs that doesn't work in Perl 5.8.x
 
