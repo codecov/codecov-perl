@@ -51,7 +51,8 @@ sub get_file_lines {
 sub get_file_coverage {
     my ($file, $db) = @_;
 
-    my $lines     = get_file_lines($file);
+    my $realpath  = get_file_realpath($file);
+    my $lines     = get_file_lines($realpath);
     my $statement = $db->cover->file($file)->statement;
     my @coverage  = (undef);
 
@@ -59,7 +60,7 @@ sub get_file_coverage {
         push @coverage, get_line_coverage($statement, $i);
     }
 
-    return $file => \@coverage;
+    return $realpath => \@coverage;
 }
 
 sub get_line_coverage {
@@ -75,6 +76,19 @@ sub get_line_coverage_by_location {
     return $location unless $location;
     return if $location->[0]->uncoverable;
     return $location->[0]->covered;
+}
+
+sub get_file_realpath {
+    my $file = shift;
+
+    if (-d 'blib') {
+        my $realpath = $file;
+        $realpath =~ s/blib\/lib/lib/;
+
+        return $realpath if -f $realpath;
+    }
+
+    return $file;
 }
 
 sub get_codecov_json {
