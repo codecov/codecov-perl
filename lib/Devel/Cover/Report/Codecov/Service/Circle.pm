@@ -10,8 +10,8 @@ sub detect {
 sub configuration {
     return {
         service      => 'circleci',
-        build        => $ENV{CIRCLE_BUILD_NUM} . '/' . $ENV{CIRCLE_NODE_INDEX},
-        job          => $ENV{CIRCLE_BUILD_NUM} . '/' . $ENV{CIRCLE_NODE_INDEX},
+        build        => $ENV{CIRCLE_BUILD_NUM} . '.' . $ENV{CIRCLE_NODE_INDEX},
+        job          => $ENV{CIRCLE_BUILD_NUM} . '.' . $ENV{CIRCLE_NODE_INDEX},
         commit       => $ENV{CIRCLE_SHA1},
         branch       => $ENV{CIRCLE_BRANCH},
         pull_request => $ENV{CIRCLE_PR_NUMBER},
