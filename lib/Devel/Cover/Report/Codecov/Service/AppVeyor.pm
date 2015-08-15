@@ -12,7 +12,7 @@ sub configuration {
         service => 'appveyor',
         commit  => $ENV{APPVEYOR_REPO_COMMIT},
         branch  => $ENV{APPVEYOR_REPO_BRANCH},
-        job     => $ENV{APPVEYOR_BUILD_VERSION},
+        job     => $ENV{APPVEYOR_ACCOUNT_NAME} . '/' . $ENV{APPVEYOR_PROJECT_SLUG} . '/' . $ENV{APPVEYOR_BUILD_VERSION},
         build   => $ENV{APPVEYOR_JOB_ID},
         slug    => $ENV{APPVEYOR_REPO_NAME},
     };
