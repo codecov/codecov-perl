@@ -4,6 +4,7 @@ use utf8;
 
 use lib qw(
     lib
+    t/data/proj/lib
 );
 
 use Exporter 'import';
