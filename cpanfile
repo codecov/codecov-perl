@@ -18,6 +18,7 @@ on 'test' => sub {
 
     requires 'Devel::Cover', '1.20';
     requires 'Capture::Tiny', '0.30';
+    requires 'Cwd::Guard', '0.04';
 };
 
 on 'develop' => sub {
