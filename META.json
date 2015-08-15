@@ -80,8 +80,9 @@
          "web" : "https://github.com/codecov/codecov-perl"
       }
    },
-   "version" : "0.06",
+   "version" : "0.07",
    "x_contributors" : [
+      "stevepeak <steve@stevepeak.net>",
       "Pine Mizune <pinemz@gmail.com>"
    ],
    "x_serialization_backend" : "JSON::PP version 2.27203"

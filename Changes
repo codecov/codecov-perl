@@ -2,6 +2,10 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.07 2015-08-15T14:16:59Z
+    - support Magnum CI
+    - fix API parameters from CI environment variables
+
 0.06 2015-08-15T04:37:07Z
     - support blib directory
 
