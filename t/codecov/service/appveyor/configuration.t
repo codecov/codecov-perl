@@ -22,7 +22,7 @@ subtest basic => sub {
             service => 'appveyor',
             commit  => 'commit',
             branch  => 'branch',
-            job     => 'name/sluf/build_version',
+            job     => 'name/slug/build_version',
             build   => 'job_id',
             slug    => 'repo_name',
         };
