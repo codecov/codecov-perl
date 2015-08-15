@@ -21,6 +21,7 @@ You must set CODECOV\_TOKEN environment variables if you don't use Travis CI, Ci
 - [AppVeyor](http://www.appveyor.com/)
 - [Codeship](https://codeship.com/)
 - [Drone.io](https://drone.io/)
+- [Magnum CI](https://magnum-ci.com/)
 - [Semaphore](https://semaphoreci.com/)
 - [Snap CI](https://snap-ci.com/)
 - [Wercker](http://wercker.com/)
