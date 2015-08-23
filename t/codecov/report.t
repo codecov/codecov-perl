@@ -48,10 +48,9 @@ subtest 'if service found' => sub {
                 return $service->configuration;
             },
 
-            # Find::Module
-            findallmod => sub {
+            get_services => sub {
                 my $pkg = shift;
-                is $pkg, 'Devel::Cover::Report::Codecov::Service';
+                is $pkg, 'Devel::Cover::Report::Codecov';
                 return ($service);
             },
         });
@@ -69,7 +68,7 @@ subtest 'if service found' => sub {
     is $guard->call_count($pkg, 'get_codecov_json'), 1;
     is $guard->call_count($pkg, 'get_request_url'), 1;
     is $guard->call_count($pkg, 'send_report'), 1;
-    is $guard->call_count($pkg, 'findallmod'), 1;
+    is $guard->call_count($pkg, 'get_services'), 1;
 };
 
 subtest 'if service not found' => sub {

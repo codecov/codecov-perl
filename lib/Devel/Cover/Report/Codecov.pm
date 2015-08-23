@@ -17,7 +17,7 @@ our $API_ENDPOINT = 'http://codecov.io/upload/v2';
 sub report {
     my ($pkg, $db, $options) = @_;
 
-    my @services  = findallmod "${pkg}::Service";
+    my @services  = get_services($pkg);
     my ($service) = grep { $_->detect } @services;
     die 'unknown service. could not get configuration' unless $service;
 
@@ -34,6 +34,16 @@ sub report {
     else {
         die $res->{message} . "\n";
     }
+}
+
+sub get_services {
+    my $pkg = shift;
+
+    my @services = findallmod "${pkg}::Service";
+    return sort {
+        defined $a->can('fallback') && $a->fallback ?  1 :
+        defined $b->can('fallback') && $b->fallback ? -1 : 0
+    } @services;
 }
 
 sub get_file_lines {
