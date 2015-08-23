@@ -2,6 +2,10 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.08 2015-08-23T09:42:01Z
+    - support local git and mercurial repository
+    - add Devel::Cover to dependencies
+
 0.07 2015-08-15T14:16:59Z
     - support Magnum CI
     - fix API parameters from CI environment variables
