@@ -39,8 +39,11 @@ sub report {
 sub get_services {
     my $pkg = shift;
 
-    my @services  = findallmod "${pkg}::Service";
-    return @services;
+    my @services = findallmod "${pkg}::Service";
+    return sort {
+        defined $a->can('fallback') && $a->fallback ?  1 :
+        defined $b->can('fallback') && $b->fallback ? -1 : 0
+    } @services;
 }
 
 sub get_file_lines {
