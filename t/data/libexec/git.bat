@@ -1,3 +1,3 @@
 @echo off
 
-perl "%~dp0\git"
+perl "%~dp0\git" %*

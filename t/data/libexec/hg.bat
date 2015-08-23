@@ -1,3 +1,3 @@
 @echo off
 
-perl "%~dp0\hg"
+perl "%~dp0\hg" %*
