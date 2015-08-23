@@ -1,5 +1,7 @@
 requires 'perl', '5.008008';
 
+requires 'Devel::Cover';
+
 requires 'URI', '1.60';
 requires 'Furl', '3.07';
 requires 'IO::Socket::SSL', '2.016';
