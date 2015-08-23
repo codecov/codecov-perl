@@ -2,15 +2,11 @@ use strict;
 use warnings FATAL => 'all';
 use utf8;
 
-our $READPIPE;
-BEGIN {
-    $READPIPE = sub { goto \&CORE::readpipe };
-    *CORE::GLOBAL::readpipe = sub { goto $READPIPE };
-}
-
+use Config;
+use Cwd qw/abs_path/;
+use Cwd::Guard qw/cwd_guard/;
 use File::Temp qw/tempdir/;
 use File::Which qw/which/;
-use Cwd::Guard qw/cwd_guard/;
 use Capture::Tiny qw/capture/;
 
 use t::Util;
@@ -51,10 +47,8 @@ if (which 'git') {
 }
 
 subtest mock => sub {
-    $READPIPE = sub {
-        return $_[0] =~ /abbrev-ref/ ?
-            'master' : '3713ace1c825f6626e439e3cb72e2ce37f0cd63e';
-    };
+    local $ENV{PATH} =
+        abs_path('t/data/libexec') . $Config::Config{path_sep} . $ENV{PATH};
 
     cmp_deeply
         configuration,
