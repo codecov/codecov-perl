@@ -2,9 +2,16 @@ use strict;
 use warnings FATAL => 'all';
 use utf8;
 
+our $READPIPE;
+BEGIN {
+    $READPIPE = sub { goto \&CORE::readpipe };
+    *CORE::GLOBAL::readpipe = sub { goto $READPIPE };
+}
+
 use File::Temp qw/tempdir/;
 use File::Which qw/which/;
 use Cwd::Guard qw/cwd_guard/;
+use Capture::Tiny qw/capture/;
 
 use t::Util;
 use Devel::Cover::Report::Codecov::Service::Git;
@@ -20,7 +27,7 @@ if (which 'git') {
         my $guard = cwd_guard("$dir/git");
 
         subtest master => sub {
-            `git reset --hard master`;
+            capture { `git reset --hard master` };
 
             cmp_deeply
                 configuration,
@@ -31,7 +38,7 @@ if (which 'git') {
         };
 
         subtest HEAD => sub {
-            `git checkout HEAD~`;
+            capture { `git checkout HEAD~` };
 
             cmp_deeply
                 configuration,
@@ -42,5 +49,19 @@ if (which 'git') {
         };
     };
 }
+
+subtest mock => sub {
+    $READPIPE = sub {
+        return $_[0] =~ /abbrev-ref/ ?
+            'master' : '3713ace1c825f6626e439e3cb72e2ce37f0cd63e';
+    };
+
+    cmp_deeply
+        configuration,
+        {
+            branch => 'master',
+            commit => '3713ace1c825f6626e439e3cb72e2ce37f0cd63e',
+        };
+};
 
 done_testing;
