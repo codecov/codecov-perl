@@ -5,6 +5,7 @@ requires 'Furl', '3.07';
 requires 'IO::Socket::SSL', '2.016';
 requires 'JSON::XS', '3.01';
 requires 'Module::Find', '0.13';
+requires 'Capture::Tiny', '0.30';
 
 on 'test' => sub {
     requires 'Test::More', '1.001014';
@@ -18,7 +19,11 @@ on 'test' => sub {
 
     requires 'Devel::Cover', '1.20';
     requires 'Capture::Tiny', '0.30';
+    requires 'Cwd', '3.47';
     requires 'Cwd::Guard', '0.04';
+    requires 'File::Which', '1.19';
+    requires 'Archive::Tar', '2.04';
+    requires 'File::Temp', '0.2304';
 };
 
 on 'develop' => sub {
