@@ -8,7 +8,7 @@ init:
 install:
   - choco install strawberryperl -version 5.20.1.1
   - SET PATH=C:\strawberry\c\bin;C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;%PATH%
-  - cpanm install Carton
+  - cpanm --notest --quiet Carton
   - carton install
 
 build: off
