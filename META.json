@@ -86,7 +86,7 @@
          "web" : "https://github.com/codecov/codecov-perl"
       }
    },
-   "version" : "0.08",
+   "version" : "0.09",
    "x_contributors" : [
       "stevepeak <steve@stevepeak.net>",
       "Pine Mizune <pinemz@gmail.com>"
