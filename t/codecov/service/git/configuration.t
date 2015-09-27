@@ -21,6 +21,7 @@ if (which 'git') {
         my $dir = tempdir;
         extract_tar('t/data/git.tar.bz2', $dir);
         my $guard = cwd_guard("$dir/git");
+        local $ENV{GIT_DIR} = "$dir/git/.git";
 
         subtest master => sub {
             capture { `git reset --hard master` };
