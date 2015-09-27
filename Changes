@@ -2,6 +2,9 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.10 2015-09-27T08:56:26Z
+    - fix tests
+
 0.09 2015-08-24T15:04:21Z
     - support Shippable
 
