@@ -6,8 +6,8 @@ use Config;
 use Cwd qw/abs_path/;
 use Cwd::Guard qw/cwd_guard/;
 use File::Temp qw/tempdir/;
-use File::Which qw/which/;
 use Capture::Tiny qw/capture/;
+use Test::Requires::Git;
 
 use t::Util;
 use Devel::Cover::Report::Codecov::Service::Git;
@@ -16,7 +16,9 @@ sub configuration {
     Devel::Cover::Report::Codecov::Service::Git->configuration(@_);
 }
 
-if (which 'git') {
+SKIP: {
+    test_requires_git version_ge => '1.6.3', skip => 2;
+
     subtest integrated => sub {
         my $dir = tempdir;
         extract_tar('t/data/git.tar.bz2', $dir);
