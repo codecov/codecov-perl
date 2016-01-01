@@ -2,7 +2,7 @@ package Devel::Cover::Report::Codecov;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 use URI;
 use Furl;
@@ -186,8 +186,6 @@ Devel::Cover::Report::Codecov is coverage reporter for L<Codecov|https://codecov
 Many CI services supported.
 You must set CODECOV_TOKEN environment variables if you don't use Travis CI, Circle CI and AppVeyor.
 
-There are example Codecov CI settings in L<example-perl|https://github.com/codecov/example-perl>.
-
 =over 4
 
 =item * L<Travis CI|https://travis-ci.org/>
@@ -207,6 +205,8 @@ There are example Codecov CI settings in L<example-perl|https://github.com/codec
 =item * L<Wercker|http://wercker.com/>
 
 =back
+
+There are example Codecov CI settings in L<example-perl|https://github.com/codecov/example-perl>.
 
 =head1 SEE ALSO
 

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/codecov/codecov-perl.svg?branch=master)](https://travis-ci.org/codecov/codecov-perl) [![Build status](https://ci.appveyor.com/api/projects/status/5lsn4kb9dt9fj9eq/branch/master?svg=true)](https://ci.appveyor.com/project/stevepeak/codecov-perl/branch/master)
+[![Build Status](https://travis-ci.org/codecov/codecov-perl.svg?branch=master)](https://travis-ci.org/codecov/codecov-perl)
 # NAME
 
 Devel::Cover::Report::Codecov - Backend for Codecov reporting of coverage statistics
@@ -16,8 +16,6 @@ Devel::Cover::Report::Codecov is coverage reporter for [Codecov](https://codecov
 Many CI services supported.
 You must set CODECOV\_TOKEN environment variables if you don't use Travis CI, Circle CI and AppVeyor.
 
-There are example Codecov CI settings in [example-perl](https://github.com/codecov/example-perl).
-
 - [Travis CI](https://travis-ci.org/)
 - [Circle CI](https://circleci.com/)
 - [AppVeyor](http://www.appveyor.com/)
@@ -26,6 +24,8 @@ There are example Codecov CI settings in [example-perl](https://github.com/codec
 - [Semaphore](https://semaphoreci.com/)
 - [Snap CI](https://snap-ci.com/)
 - [Wercker](http://wercker.com/)
+
+There are example Codecov CI settings in [example-perl](https://github.com/codecov/example-perl).
 
 # SEE ALSO
 
