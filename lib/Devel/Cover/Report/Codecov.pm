@@ -186,6 +186,8 @@ Devel::Cover::Report::Codecov is coverage reporter for L<Codecov|https://codecov
 Many CI services supported.
 You must set CODECOV_TOKEN environment variables if you don't use Travis CI, Circle CI and AppVeyor.
 
+There are example Codecov CI settings in [example-perl](https://github.com/codecov/example-perl).
+
 =over 4
 
 =item * L<Travis CI|https://travis-ci.org/>
