@@ -4,3 +4,6 @@ module_maker = "ModuleBuildTiny"
 license = "mit"
 authority = "cpan:PINE"
 authors = ["Pine Mizune"]
+
+[ReleaseTest]
+MinimumVersion = false

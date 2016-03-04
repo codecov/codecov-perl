@@ -2,6 +2,9 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.13 2016-03-04T13:58:51Z
+    - support branch
+
 0.12 2016-01-01T00:30:58Z
     - update documents
 
