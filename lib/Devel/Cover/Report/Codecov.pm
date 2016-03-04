@@ -59,33 +59,31 @@ sub get_file_lines {
 }
 
 sub get_file_coverage {
-    my ($file, $db) = @_;
+    my ($filepath, $db) = @_;
 
-    my $realpath  = get_file_realpath($file);
-    my $lines     = get_file_lines($realpath);
-    my $statement = $db->cover->file($file)->statement;
-    my @coverage  = (undef);
+    my $realpath   = get_file_realpath($filepath);
+    my $lines      = get_file_lines($realpath);
+    my $file       = $db->cover->file($filepath);
+    my $statements = $file->statement;
+    my $branches   = $file->branch;
+    my @coverage   = (undef);
 
     for (my $i = 1; $i <= $lines; $i++) {
-        push @coverage, get_line_coverage($statement, $i);
+        my $statement = $statements->location($i);
+        my $branch    = defined $branches ? $branches->location($i) : undef;
+        push @coverage, get_line_coverage($statement, $branch);
     }
 
     return $realpath => \@coverage;
 }
 
 sub get_line_coverage {
-    my ($statement, $n) = @_;
+    my ($statement, $branch) = @_;
 
-    my $location = $statement->location($n);
-    return get_line_coverage_by_location($location);
-}
-
-sub get_line_coverage_by_location {
-    my ($location) = @_;
-
-    return $location unless $location;
-    return if $location->[0]->uncoverable;
-    return $location->[0]->covered;
+    return $branch->[0]->covered.'/'.$branch->[0]->total if $branch;
+    return $statement unless $statement;
+    return if $statement->[0]->uncoverable;
+    return $statement->[0]->covered;
 }
 
 sub get_file_realpath {

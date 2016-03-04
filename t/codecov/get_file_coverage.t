@@ -22,20 +22,27 @@ subtest basic => sub {
                 return 3;
             },
             get_line_coverage => sub {
-                my (undef, $n) = @_;
-                cmp_ok $n, '>=', 1;
-                cmp_ok $n, '<=', 3;
-                return [ undef, 0, undef, 5 ]->[$n];
+                my ($statement, $branch) = @_;
+                is $branch, undef;
+                return $statement;
             },
         });
 
-    my $db    = Test::MockObject->new;
-    my $cover = Test::MockObject->new;
-    my $file  = Test::MockObject->new;
+    my $db     = Test::MockObject->new;
+    my $cover  = Test::MockObject->new;
+    my $file   = Test::MockObject->new;
+    my $stmt   = Test::MockObject->new;
+    my $branch = Test::MockObject->new;
 
     $db->mock(cover => sub { $cover });
     $cover->mock(file => sub { $file });
-    $file->mock(statement => sub { 'statement' });
+    $file->mock(statement => sub { $stmt });
+    $file->mock(branch => sub { $branch });
+    $stmt->mock(location => sub {
+        my (undef, $n) = @_;
+        return [ undef, 0, undef, 5 ]->[$n];
+    });
+    $branch->mock(location => sub { undef });
 
     cmp_deeply
         { get_file_coverage('lib/Test/File.pm', $db) },
@@ -47,6 +54,9 @@ subtest basic => sub {
     ok $db->called('cover');
     ok $cover->called('file');
     ok $file->called('statement');
+    ok $file->called('branch');
+    ok $stmt->called('location');
+    ok $branch->called('location');
 };
 
 done_testing;
