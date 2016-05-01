@@ -2,6 +2,9 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.14 2016-05-01T18:09:10Z
+    - fix a bug that can't parse Codecov's response
+
 0.13 2016-03-04T13:58:51Z
     - support branch
 

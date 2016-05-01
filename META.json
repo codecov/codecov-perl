@@ -91,7 +91,7 @@
          "web" : "https://github.com/codecov/codecov-perl"
       }
    },
-   "version" : "0.13",
+   "version" : "0.14",
    "x_authority" : "cpan:PINE",
    "x_contributors" : [
       "stevepeak <steve@stevepeak.net>",
