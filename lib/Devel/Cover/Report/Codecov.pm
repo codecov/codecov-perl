@@ -132,8 +132,9 @@ sub get_query {
 sub send_report {
     my ($url, $json) = @_;
 
-    my $furl = Furl->new;
-    my $res  = $furl->post($url, [], $json);
+    my $furl    = Furl->new;
+    my $headers = [ 'Accept' => 'application/json' ];
+    my $res     = $furl->post($url, $headers, $json);
 
     my ($message, $ok);
 

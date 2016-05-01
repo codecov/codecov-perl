@@ -17,9 +17,10 @@ sub _make_furl {
 
     my $furl = Test::MockObject->new;
     $furl->mock(post => sub {
-        my ($class, $url, undef, $json) = @_;
+        my ($class, $url, $headers, $json) = @_;
 
         is $url, 'http://www.example.com';
+        cmp_deeply $headers, ['Accept' => 'application/json'];
         is $json, '{"test":1}';
 
         return $res;
