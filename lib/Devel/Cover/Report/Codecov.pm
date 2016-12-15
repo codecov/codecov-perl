@@ -203,6 +203,8 @@ You must set CODECOV_TOKEN environment variables if you don't use Travis CI, Cir
 
 =item * L<Wercker|http://wercker.com/>
 
+=item * L<GitLab|https://about.gitlab.com/gitlab-ci/>
+
 =back
 
 There are example Codecov CI settings in L<example-perl|https://github.com/codecov/example-perl>.
