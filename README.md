@@ -24,6 +24,7 @@ You must set CODECOV\_TOKEN environment variables if you don't use Travis CI, Ci
 - [Semaphore](https://semaphoreci.com/)
 - [Snap CI](https://snap-ci.com/)
 - [Wercker](http://wercker.com/)
+- [Gitlab CI](https://about.gitlab.com/gitlab-ci/)
 
 There are example Codecov CI settings in [example-perl](https://github.com/codecov/example-perl).
 
