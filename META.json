@@ -4,7 +4,7 @@
       "Pine Mizune"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v3.0.1, CPAN::Meta::Converter version 2.150005",
+   "generated_by" : "Minilla/v3.0.7, CPAN::Meta::Converter version 2.150010",
    "license" : [
       "mit"
    ],
@@ -91,11 +91,12 @@
          "web" : "https://github.com/codecov/codecov-perl"
       }
    },
-   "version" : "0.14",
+   "version" : "0.15",
    "x_authority" : "cpan:PINE",
    "x_contributors" : [
       "stevepeak <steve@stevepeak.net>",
+      "Pedro Melo <melo@simplicidade.org>",
       "Pine Mizune <pinemz@gmail.com>"
    ],
-   "x_serialization_backend" : "JSON::PP version 2.27300"
+   "x_serialization_backend" : "JSON::PP version 2.27400"
 }

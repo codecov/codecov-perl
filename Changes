@@ -2,6 +2,9 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.15 2016-12-15T03:14:55Z
+    - support GitLab CI (thank you @melo)
+
 0.14 2016-05-01T18:09:10Z
     - fix a bug that can't parse Codecov's response
 

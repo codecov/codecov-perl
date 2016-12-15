@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/codecov/codecov-perl.svg?branch=master)](https://travis-ci.org/codecov/codecov-perl)  [![Build status](https://ci.appveyor.com/api/projects/status/5lsn4kb9dt9fj9eq/branch/master?svg=true)](https://ci.appveyor.com/project/stevepeak/codecov-perl/branch/master)
+[![Build Status](https://travis-ci.org/codecov/codecov-perl.svg?branch=master)](https://travis-ci.org/codecov/codecov-perl)
 # NAME
 
 Devel::Cover::Report::Codecov - Backend for Codecov reporting of coverage statistics
@@ -24,7 +24,6 @@ You must set CODECOV\_TOKEN environment variables if you don't use Travis CI, Ci
 - [Semaphore](https://semaphoreci.com/)
 - [Snap CI](https://snap-ci.com/)
 - [Wercker](http://wercker.com/)
-- [Gitlab CI](https://about.gitlab.com/gitlab-ci/)
 
 There are example Codecov CI settings in [example-perl](https://github.com/codecov/example-perl).
 
@@ -58,4 +57,4 @@ THE SOFTWARE.
 
 # AUTHOR
 
-Pine Mizune &lt;pinemz@gmail.com>
+Pine Mizune <pinemz@gmail.com>
