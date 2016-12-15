@@ -2,6 +2,9 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.17 2016-12-15T09:13:52Z
+    - fix support CI list in the readme
+
 0.16 2016-12-15T03:19:15Z
     - fix bugs that file name is invalid
 
