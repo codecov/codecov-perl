@@ -16,7 +16,6 @@ sub configuration {
     job       => $ENV{CI_PIPELINE_ID},
     branch    => $ENV{CI_BUILD_REF_NAME},
     tag       => $ENV{CI_BUILD_TAG},
-    repo      => "$ENV{CI_PROJECT_URL}/tree/$ENV{CI_BUILD_REF_NAME}",
     slug      => $ENV{CI_PROJECT_PATH},
   };
 }
