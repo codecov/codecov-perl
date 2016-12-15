@@ -5,7 +5,7 @@ use utf8;
 use t::Util;
 use Devel::Cover::Report::Codecov::Service::Gitlab;
 
-sub gitlab {'Devel::Cover::Report::Codecov::Service::Gitlab'}
+sub gitlab { 'Devel::Cover::Report::Codecov::Service::Gitlab' }
 
 subtest basic => sub {
   local $ENV{CI_BUILD_REF}      = 'commit';
@@ -19,14 +19,14 @@ subtest basic => sub {
   cmp_deeply
     gitlab->configuration,
     {
-    service   => 'gitlab',
-    commit    => 'commit',
-    build     => 'build_id',
-    build_url => 'repo_url/builds/build_id',
-    job       => 'job_id',
-    branch    => 'branch',
-    tag       => 'tag',
-    slug      => 'repo_slug',
+        service   => 'gitlab',
+        commit    => 'commit',
+        build     => 'build_id',
+        build_url => 'repo_url/builds/build_id',
+        job       => 'job_id',
+        branch    => 'branch',
+        tag       => 'tag',
+        slug      => 'repo_slug',
     };
 };
 
