@@ -11,6 +11,7 @@ subtest basic => sub {
   local $ENV{CI_BUILD_REF}      = 'commit';
   local $ENV{CI_BUILD_ID}       = 'build_id';
   local $ENV{CI_BUILD_REF_NAME} = 'branch';
+  local $ENV{CI_BUILD_TAG}      = 'tag';
   local $ENV{CI_PIPELINE_ID}    = 'job_id';
   local $ENV{CI_PROJECT_PATH}   = 'repo_slug';
   local $ENV{CI_PROJECT_URL}    = 'repo_url';
@@ -24,6 +25,7 @@ subtest basic => sub {
     build_url => 'repo_url/builds/build_id',
     job       => 'job_id',
     branch    => 'branch',
+    tag       => 'tag',
     repo      => 'repo_url/tree/branch',
     slug      => 'repo_slug',
     };
