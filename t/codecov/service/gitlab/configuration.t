@@ -3,9 +3,9 @@ use warnings FATAL => 'all';
 use utf8;
 
 use t::Util;
-use Devel::Cover::Report::Codecov::Service::Gitlab;
+use Devel::Cover::Report::Codecov::Service::GitLab;
 
-sub gitlab { 'Devel::Cover::Report::Codecov::Service::Gitlab' }
+sub gitlab { 'Devel::Cover::Report::Codecov::Service::GitLab' }
 
 subtest basic => sub {
   local $ENV{CI_BUILD_REF}      = 'commit';
