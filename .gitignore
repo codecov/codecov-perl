@@ -8,3 +8,6 @@ cpanfile.snapshot
 cover_db/
 
 /Devel-Cover-Report-Codecov-*
+
+# for Test::Requires::Git
+.test.requires.git.lock
