@@ -24,7 +24,7 @@ test_script:
   - SET PATH=%CD%\local\bin;%PATH%
   - carton exec cover -report codecov
 
-cache:
-  - local
+cache: []
+  # - local
 
 shallow_clone: true
