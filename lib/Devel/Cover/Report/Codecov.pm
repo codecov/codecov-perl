@@ -80,6 +80,8 @@ sub get_file_coverage {
 sub get_line_coverage {
     my ($statement, $branch) = @_;
 
+    # If all branches covered or uncoverable, report as all covered
+    return $branch->[0]->total.'/'.$branch->[0]->total if $branch && !$branch->[0]->error;
     return $branch->[0]->covered.'/'.$branch->[0]->total if $branch;
     return $statement unless $statement;
     return if $statement->[0]->uncoverable;
