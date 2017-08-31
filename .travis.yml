@@ -21,13 +21,13 @@ script:
   - |-
     HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t|^local/" \
     prove -r t
-  - PERL5LIB=$TRAVIS_BUILD_DIR/lib cover -report codecov
+  - PERL5LIB=$TRAVIS_BUILD_DIR/lib travis_retry cover -report codecov
 
   - cd $TRAVIS_BUILD_DIR/t/data/proj_blib
   - |-
     HARNESS_PERL_SWITCHES="-MDevel::Cover=+ignore,^t|^local/" \
     prove --blib -r t
-  - PERL5LIB=$TRAVIS_BUILD_DIR/lib cover -report codecov
+  - PERL5LIB=$TRAVIS_BUILD_DIR/lib travis_retry cover -report codecov
 
 notifications:
   slack:
