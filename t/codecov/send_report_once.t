@@ -10,7 +10,7 @@ use t::Util;
 use Devel::Cover::Report::Codecov;
 
 sub send_report {
-    Devel::Cover::Report::Codecov::send_report(@_);
+    Devel::Cover::Report::Codecov::send_report_once(@_);
 }
 
 sub _make_furl {
