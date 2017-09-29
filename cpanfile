@@ -15,6 +15,7 @@ on 'test' => sub {
     requires 'Test::Deep', '0.117';
     requires 'Test::Exception', '0.40';
     requires 'Test::Mock::Guard', '0.10';
+    requires 'Test::Mock::Time', '0.1.6';
     requires 'Test::MockObject', '1.20150527';
     requires 'Test::Requires::Git', '1.003';
 

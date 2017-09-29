@@ -2,8 +2,9 @@ use strict;
 use warnings FATAL => 'all';
 use utf8;
 
-use Test::MockObject;
 use Test::Mock::Guard;
+use Test::Mock::Time;
+use Test::MockObject;
 
 use lib '.';
 use t::Util;
