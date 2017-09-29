@@ -201,8 +201,6 @@ You must set CODECOV_TOKEN environment variables if you don't use Travis CI, Cir
 
 =item * L<Semaphore|https://semaphoreci.com/>
 
-=item * L<Snap CI|https://snap-ci.com/>
-
 =item * L<Wercker|http://wercker.com/>
 
 =item * L<GitLab|https://about.gitlab.com/gitlab-ci/>
