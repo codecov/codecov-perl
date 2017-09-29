@@ -2,6 +2,10 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.20 2017-09-29T12:32:54Z
+    - good bye snap ci
+    - add retry logics
+
 0.19 2017-08-31T14:43:49Z
     - support uncoverable branches
 
