@@ -7,6 +7,7 @@ our $VERSION = '0.19';
 use URI;
 use Furl;
 use JSON::XS;
+use Sub::Retry;
 
 use Module::Find;
 useall 'Devel::Cover::Report::Codecov::Service';
@@ -24,8 +25,7 @@ sub report {
     my $query = get_query($service);
     my $url   = get_request_url($API_ENDPOINT, $query);
     my $json  = get_codecov_json($options->{file}, $db);
-
-    my $res = send_report($url, $json);
+    my $res   = send_report($url, $json);
 
     if ($res->{ok}) {
         print $res->{message} . "\n";
@@ -132,6 +132,14 @@ sub get_query {
 }
 
 sub send_report {
+    my ($url, $json) = @_;
+
+    return retry 5, 1,
+        sub { send_report_once($url, $json) },
+        sub { $_[0]->{ok} ? 0 : 1 };
+}
+
+sub send_report_once {
     my ($url, $json) = @_;
 
     my $furl    = Furl->new;
