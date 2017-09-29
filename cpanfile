@@ -8,6 +8,7 @@ requires 'IO::Socket::SSL', '2.016';
 requires 'JSON::XS', '3.01';
 requires 'Module::Find', '0.13';
 requires 'Capture::Tiny', '0.30';
+requires 'Sub::Retry', '0.06';
 
 on 'test' => sub {
     requires 'Test::More', '1.001014';
