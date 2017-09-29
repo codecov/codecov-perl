@@ -22,7 +22,6 @@ You must set CODECOV\_TOKEN environment variables if you don't use Travis CI, Ci
 - [Codeship](https://codeship.com/)
 - [Drone.io](https://drone.io/)
 - [Semaphore](https://semaphoreci.com/)
-- [Snap CI](https://snap-ci.com/)
 - [Wercker](http://wercker.com/)
 - [GitLab](https://about.gitlab.com/gitlab-ci/)
 
