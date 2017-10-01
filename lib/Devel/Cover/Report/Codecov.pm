@@ -14,6 +14,8 @@ useall 'Devel::Cover::Report::Codecov::Service';
 
 
 our $API_ENDPOINT = 'http://codecov.io/upload/v2';
+our $RETRY_TIMES  = 5;
+our $RETRY_DELAY  = 1; # sec
 
 sub report {
     my ($pkg, $db, $options) = @_;
@@ -134,9 +136,15 @@ sub get_query {
 sub send_report {
     my ($url, $json) = @_;
 
-    return retry 5, 1,
-        sub { send_report_once($url, $json) },
+    my $n_times = $RETRY_TIMES > 0 ? $RETRY_TIMES : 1;
+
+    # evaluate in list context
+    my $result;
+    my () = retry $n_times, $RETRY_DELAY,
+        sub { $result = send_report_once($url, $json) },
         sub { $_[0]->{ok} ? 0 : 1 };
+
+    return $result;
 }
 
 sub send_report_once {
