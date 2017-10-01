@@ -2,13 +2,13 @@ requires 'perl', '5.010000';
 
 requires 'Devel::Cover';
 
-requires 'URI', '1.60';
+requires 'Capture::Tiny', '0.30';
 requires 'Furl', '3.07';
 requires 'IO::Socket::SSL', '2.016';
 requires 'JSON::XS', '3.01';
 requires 'Module::Find', '0.13';
-requires 'Capture::Tiny', '0.30';
 requires 'Sub::Retry', '0.06';
+requires 'URI', '1.60';
 
 on 'test' => sub {
     requires 'Test::More', '1.001014';
