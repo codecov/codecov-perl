@@ -140,9 +140,12 @@ sub send_report {
 
     # evaluate in list context
     my $result;
-    my () = retry $n_times, $RETRY_DELAY,
-        sub { $result = send_report_once($url, $json) },
-        sub { $_[0]->{ok} ? 0 : 1 };
+    {
+        no warnings 'void';
+        [ retry $n_times, $RETRY_DELAY,
+            sub { $result = send_report_once($url, $json) },
+            sub { $_[0]->{ok} ? 0 : 1 } ];
+    };
 
     return $result;
 }
