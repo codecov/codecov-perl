@@ -10,7 +10,7 @@
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
-      "version" : 2
+      "version" : "2"
    },
    "name" : "Devel-Cover-Report-Codecov",
    "no_index" : {
@@ -93,13 +93,14 @@
          "web" : "https://github.com/codecov/codecov-perl"
       }
    },
-   "version" : "0.21",
+   "version" : "0.22",
    "x_authority" : "cpan:PINE",
    "x_contributors" : [
+      "Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>",
       "M Somerville <dracos@users.noreply.github.com>",
       "Pedro Melo <melo@simplicidade.org>",
       "Pine Mizune <pinemz@gmail.com>",
       "stevepeak <steve@stevepeak.net>"
    ],
-   "x_serialization_backend" : "JSON::PP version 2.94"
+   "x_serialization_backend" : "JSON::PP version 2.27400_02"
 }
