@@ -13,6 +13,17 @@ perl:
   - "5.24"
   - "5.26"
 
+before_install:
+  - git clone git://github.com/travis-perl/helpers ~/travis-perl-helpers
+  - source ~/travis-perl-helpers/init
+  - build-perl
+  - perl -V
+
+install:
+  - cpan-install --deps
+  # Install the right version of Devel::Cover, but no actual report module
+  - COVERAGE=1 cpan-install --coverage
+
 script:
   # unit tests
   - prove -r t/codecov
