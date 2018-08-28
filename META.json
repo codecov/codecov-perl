@@ -93,14 +93,15 @@
          "web" : "https://github.com/codecov/codecov-perl"
       }
    },
-   "version" : "0.22",
+   "version" : "0.23",
    "x_authority" : "cpan:PINE",
    "x_contributors" : [
       "Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>",
       "M Somerville <dracos@users.noreply.github.com>",
       "Pedro Melo <melo@simplicidade.org>",
       "Pine Mizune <pinemz@gmail.com>",
-      "stevepeak <steve@stevepeak.net>"
+      "stevepeak <steve@stevepeak.net>",
+      "Álvaro Castellano <alvaro.castellano.vela@gmail.com>"
    ],
    "x_serialization_backend" : "JSON::PP version 2.27400_02"
 }
