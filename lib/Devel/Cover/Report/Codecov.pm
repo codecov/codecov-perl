@@ -2,7 +2,7 @@ package Devel::Cover::Report::Codecov;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.22';
+our $VERSION = '0.23';
 
 use URI;
 use Furl;
@@ -13,7 +13,7 @@ use Module::Find;
 useall 'Devel::Cover::Report::Codecov::Service';
 
 
-our $API_ENDPOINT = 'http://codecov.io/upload/v2';
+our $API_ENDPOINT = 'https://codecov.io/upload/v2';
 our $RETRY_TIMES  = 5;
 our $RETRY_DELAY  = 1; # sec
 
