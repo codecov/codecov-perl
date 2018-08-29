@@ -5,7 +5,9 @@ Devel::Cover::Report::Codecov - Backend for Codecov reporting of coverage statis
 
 # SYNOPSIS
 
-    $ cover -report codecov
+```
+$ cover -report codecov
+```
 
 # DESCRIPTION
 
