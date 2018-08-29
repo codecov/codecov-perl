@@ -212,17 +212,19 @@ You must set CODECOV_TOKEN environment variables if you don't use Travis CI, Cir
 
 =item * L<Circle CI|https://circleci.com/>
 
-=item * L<AppVeyor|http://www.appveyor.com/>
-
 =item * L<Codeship|https://codeship.com/>
-
-=item * L<Drone.io|https://drone.io/>
 
 =item * L<Semaphore|https://semaphoreci.com/>
 
-=item * L<Wercker|http://wercker.com/>
+=item * L<drone.io|https://drone.io/>
 
-=item * L<GitLab|https://about.gitlab.com/gitlab-ci/>
+=item * L<AppVeyor|https://www.appveyor.com/>
+
+=item * L<Wercker|https://wercker.com/>
+
+=item * L<Shippable|https://www.shippable.com/>
+
+=item * L<GitLab CI|https://about.gitlab.com/gitlab-ci/>
 
 =back
 
