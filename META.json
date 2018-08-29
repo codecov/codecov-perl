@@ -94,7 +94,7 @@
          "web" : "https://github.com/codecov/codecov-perl"
       }
    },
-   "version" : "0.23",
+   "version" : "0.24",
    "x_authority" : "cpan:PINE",
    "x_contributors" : [
       "Dagfinn Ilmari Mannsåker <ilmari@ilmari.org>",

@@ -2,6 +2,9 @@ Revision history for Perl extension Devel-Cover-Report-Codecov
 
 {{$NEXT}}
 
+0.24 2018-08-29T15:01:51Z
+    - good bye Magnum CI
+
 0.23 2018-08-28T16:31:09Z
     - use https endpoint
 

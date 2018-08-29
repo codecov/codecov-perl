@@ -2,7 +2,7 @@ package Devel::Cover::Report::Codecov;
 use strict;
 use warnings;
 use utf8;
-our $VERSION = '0.23';
+our $VERSION = '0.24';
 
 use URI;
 use Furl;
