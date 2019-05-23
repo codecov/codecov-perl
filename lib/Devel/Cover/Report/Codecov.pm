@@ -226,6 +226,8 @@ You must set CODECOV_TOKEN environment variables if you don't use Travis CI, Cir
 
 =item * L<GitLab CI|https://about.gitlab.com/gitlab-ci/>
 
+=item * L<Bitrise|https://www.bitrise.io/>
+
 =back
 
 There are example Codecov CI settings in L<example-perl|https://github.com/codecov/example-perl>.
