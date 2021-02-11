@@ -154,7 +154,7 @@ sub send_report_once {
     my ($url, $json) = @_;
 
     my $furl    = Furl->new;
-    my $headers = [ 'Accept' => 'application/json' ];
+    my $headers = [];
     my $res     = $furl->post($url, $headers, $json);
 
     my ($message, $ok);
