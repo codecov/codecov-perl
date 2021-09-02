@@ -1,3 +1,11 @@
+🚨🚨 Deprecation Notice 🚨🚨
+
+This uploader is being deprecated by the Codecov team. We recommend migrating to our [new uploader](https://docs.codecov.com/docs/codecov-uploader) as soon as possible to prevent any lapses in coverage. [The new uploader is open source](https://github.com/codecov/uploader), and we highly encourage submitting Issues and Pull Requests.
+
+You can visit our blog post to learn more about our [deprecation plan](https://about.codecov.io/blog/codecov-uploader-deprecation-plan/)
+
+**On February 1, 2022 this uploader will be completely deprecated and will no longer be able to upload coverage to Codecov.**
+
 [![Build Status](https://travis-ci.org/codecov/codecov-perl.svg?branch=master)](https://travis-ci.org/codecov/codecov-perl)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcodecov%2Fcodecov-perl.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcodecov%2Fcodecov-perl?ref=badge_shield)
 # NAME
